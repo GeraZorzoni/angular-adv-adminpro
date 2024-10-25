@@ -6,7 +6,14 @@ import { PagesRoutingModule } from './pages/pages.routing';
 
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
-const routes: Routes = [{ path: '**', component: NopagefoundComponent }];
+const routes: Routes = [
+  // path: '/dasboard' PagesRouting
+  // path: '/auth' AuthRouting
+  // path: '/medicos' MedicosRouting
+  // path: '/compras' ComprasRouting
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', component: NopagefoundComponent },
+];
 
 @NgModule({
   declarations: [],
